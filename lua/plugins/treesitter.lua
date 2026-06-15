@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+--if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Treesitter
 -- --------------------
@@ -6,19 +6,53 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 -- as nvim-treesitter simply provides a download utility for parsers
 
 ---@type LazySpec
--- return {
---   "AstroNvim/astrocore",
---   ---@type AstroCoreOpts
---   opts = {
---     treesitter = {
---       highlight = true, -- enable/disable treesitter based highlighting
---       indent = true, -- enable/disable treesitter based indentation
---       auto_install = true, -- enable/disable automatic installation of detected languages
---       -- ensure_installed = {
---       --   "lua",
---       --   "vim",
---       --   -- add more arguments for adding more treesitter parsers
---       -- },
---     },
---   },
--- }
+return {
+  "AstroNvim/astrocore",
+  ---@type AstroCoreOpts
+  opts = {
+    treesitter = {
+      highlight = true, -- enable/disable treesitter based highlighting
+      indent = true, -- enable/disable treesitter based indentation
+      auto_install = true, -- enable/disable automatic installation of detected languages
+      ensure_installed = {
+        -- langs
+        "lua",
+        "vim",
+        "lua",
+        "vim",
+        "bash",
+        "cpp",
+        "c",
+        "go",
+        "java",
+        "php",
+        "python",
+        "ruby",
+        "javascript",
+        "typescript",
+        -- files
+        "tsx",
+        "yaml",
+        "toml",
+        "json",
+        "dockerfile",
+        "nginx",
+        "make",
+        "markdown",
+        "html",
+        "css",
+        "scss",
+        "vue",
+        "xml",
+        "luap",
+        "jsdoc",
+        -- git
+        "gitcommit",
+        "gitrebase",
+        "diff",
+        "sql",
+        -- add more arguments for adding more treesitter parsers
+      },
+    },
+  },
+}
