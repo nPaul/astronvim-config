@@ -11,18 +11,20 @@ return {
   ---@type AstroCoreOpts
   opts = {
     treesitter = {
+      enabled = false,
       highlight = true, -- enable/disable treesitter based highlighting
       indent = true, -- enable/disable treesitter based indentation
       auto_install = true, -- enable/disable automatic installation of detected languages
       ensure_installed = {
+        -- core
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
         -- langs
-        "lua",
-        "vim",
-        "lua",
-        "vim",
         "bash",
         "cpp",
-        "c",
         "go",
         "java",
         "php",
